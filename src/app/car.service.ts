@@ -1,4 +1,5 @@
 //1)Create the services
+//services hold the centralized logic of the project
 import { Injectable } from "@angular/core";
 
 @Injectable()
