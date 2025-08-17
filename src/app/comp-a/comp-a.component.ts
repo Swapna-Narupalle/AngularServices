@@ -15,4 +15,16 @@ export class CompAComponent {
      getMecsList(){
       this.MecsList = this.carService.getMecList();
      }
+     
+     //component to component
+     evtSendMoney(){
+      let paymentAmount = "2000 Rs";
+      this.carService.paymentDetails(paymentAmount);
+     }
+     
+     carListInfo:any;
+     //service to service
+     getInfoOfBangalore(){
+       this.carListInfo = this.carService.getAllInfo("Bangalore");  //Cars List:20000
+     }
 }

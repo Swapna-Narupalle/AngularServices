@@ -1,5 +1,13 @@
 <!-- <p>comp-a works!</p> -->
 <button (click)="getMecsList()">getMecList</button>
+
 <div *ngFor="let item of MecsList">
       {{item}}
 </div>
+
+<!-- component to component -->
+<button (click)="evtSendMoney()">SendMoney</button>
+
+<!-- service to service -->
+ <button (click)="getInfoOfBangalore()">getBangaloreInfo</button>
+ <p>{{carListInfo}}</p>

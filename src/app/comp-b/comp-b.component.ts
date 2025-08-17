@@ -8,8 +8,24 @@ import { CarService } from '../car.service';
 })
 export class CompBComponent {
     Timings:any;
+    paymentB:any;
+    getCarsList:any;
+
     constructor(private carService:CarService){
        this.Timings=this.carService.getAvailableSlots();
+
+       this.carService.moneyEventEmitter.subscribe((result)=>{
+        console.log("compB: "+result);
+        this.paymentB=result;
+      })
+
+      
     }
+
+    evtGetHydInfo(){
+        this.getCarsList = this.carService.getAllInfo("Hyderabad");
+      }
+
+    
 
 }
